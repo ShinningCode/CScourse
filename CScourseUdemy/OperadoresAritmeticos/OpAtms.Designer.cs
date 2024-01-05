@@ -37,6 +37,11 @@
             panel2 = new Panel();
             lblresult = new Label();
             label1 = new Label();
+            lblrest = new Label();
+            lblmult = new Label();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            lbldiv = new Label();
+            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // lblsuma
@@ -46,7 +51,7 @@
             lblsuma.Cursor = Cursors.Hand;
             lblsuma.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblsuma.ForeColor = SystemColors.ActiveCaptionText;
-            lblsuma.Location = new Point(202, 218);
+            lblsuma.Location = new Point(4, 0);
             lblsuma.Margin = new Padding(4, 0, 4, 0);
             lblsuma.Name = "lblsuma";
             lblsuma.Size = new Size(51, 48);
@@ -139,12 +144,72 @@
             label1.TabIndex = 6;
             label1.Text = "Resultado =";
             // 
+            // lblrest
+            // 
+            lblrest.BackColor = Color.FromArgb(255, 224, 192);
+            lblrest.BorderStyle = BorderStyle.Fixed3D;
+            lblrest.Cursor = Cursors.Hand;
+            lblrest.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblrest.ForeColor = SystemColors.ActiveCaptionText;
+            lblrest.Location = new Point(63, 0);
+            lblrest.Margin = new Padding(4, 0, 4, 0);
+            lblrest.Name = "lblrest";
+            lblrest.Size = new Size(51, 48);
+            lblrest.TabIndex = 0;
+            lblrest.Text = "-";
+            lblrest.TextAlign = ContentAlignment.MiddleCenter;
+            lblrest.Click += lblrest_Click;
+            // 
+            // lblmult
+            // 
+            lblmult.BackColor = Color.FromArgb(255, 224, 192);
+            lblmult.BorderStyle = BorderStyle.Fixed3D;
+            lblmult.Cursor = Cursors.Hand;
+            lblmult.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblmult.ForeColor = SystemColors.ActiveCaptionText;
+            lblmult.Location = new Point(122, 0);
+            lblmult.Margin = new Padding(4, 0, 4, 0);
+            lblmult.Name = "lblmult";
+            lblmult.Size = new Size(51, 48);
+            lblmult.TabIndex = 0;
+            lblmult.Text = "x";
+            lblmult.TextAlign = ContentAlignment.MiddleCenter;
+            lblmult.Click += lblmult_Click;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Controls.Add(lblsuma);
+            flowLayoutPanel1.Controls.Add(lblrest);
+            flowLayoutPanel1.Controls.Add(lblmult);
+            flowLayoutPanel1.Controls.Add(lbldiv);
+            flowLayoutPanel1.Location = new Point(202, 219);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(344, 54);
+            flowLayoutPanel1.TabIndex = 7;
+            // 
+            // lbldiv
+            // 
+            lbldiv.BackColor = Color.FromArgb(255, 224, 192);
+            lbldiv.BorderStyle = BorderStyle.Fixed3D;
+            lbldiv.Cursor = Cursors.Hand;
+            lbldiv.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbldiv.ForeColor = SystemColors.ActiveCaptionText;
+            lbldiv.Location = new Point(181, 0);
+            lbldiv.Margin = new Padding(4, 0, 4, 0);
+            lbldiv.Name = "lbldiv";
+            lbldiv.Size = new Size(51, 48);
+            lbldiv.TabIndex = 0;
+            lbldiv.Text = "/";
+            lbldiv.TextAlign = ContentAlignment.MiddleCenter;
+            lbldiv.Click += lbldiv_Click;
+            // 
             // OpAtms
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.MenuText;
             ClientSize = new Size(1029, 570);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(label1);
             Controls.Add(lblresult);
             Controls.Add(txtnum2);
@@ -153,13 +218,12 @@
             Controls.Add(panel1);
             Controls.Add(lblnum2);
             Controls.Add(lblnum1);
-            Controls.Add(lblsuma);
             Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
             Name = "OpAtms";
             Text = "Operadores Aritmeticos";
             WindowState = FormWindowState.Maximized;
-            Load += OpAtms_Load;
+            flowLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -175,5 +239,9 @@
         private Panel panel2;
         private Label lblresult;
         private Label label1;
+        private Label lblrest;
+        private Label lblmult;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Label lbldiv;
     }
 }
