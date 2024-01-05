@@ -32,7 +32,7 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             button1 = new Button();
             label1 = new Label();
-            button2 = new Button();
+            btnE1 = new Button();
             panel1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -49,7 +49,7 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Controls.Add(button2);
+            flowLayoutPanel1.Controls.Add(btnE1);
             flowLayoutPanel1.Controls.Add(button1);
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.ForeColor = SystemColors.ActiveCaptionText;
@@ -85,19 +85,20 @@
             label1.Text = "Ejercicios";
             label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // button2
+            // btnE1
             // 
-            button2.BackColor = Color.FromArgb(54, 54, 54);
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(6, 7);
-            button2.Margin = new Padding(0);
-            button2.Name = "button2";
-            button2.Size = new Size(172, 52);
-            button2.TabIndex = 1;
-            button2.Text = "Ejercicio 1\r\n{Operadores logicos}";
-            button2.UseVisualStyleBackColor = false;
+            btnE1.BackColor = Color.FromArgb(54, 54, 54);
+            btnE1.FlatAppearance.BorderSize = 0;
+            btnE1.FlatStyle = FlatStyle.Flat;
+            btnE1.ForeColor = SystemColors.ButtonHighlight;
+            btnE1.Location = new Point(6, 7);
+            btnE1.Margin = new Padding(0);
+            btnE1.Name = "btnE1";
+            btnE1.Size = new Size(172, 52);
+            btnE1.TabIndex = 1;
+            btnE1.Text = "Ejercicio 1\r\n{Operadores logicos}";
+            btnE1.UseVisualStyleBackColor = false;
+            btnE1.Click += button2_Click;
             // 
             // menu
             // 
@@ -121,6 +122,6 @@
         private Label label1;
         private FlowLayoutPanel flowLayoutPanel1;
         private Button button1;
-        private Button button2;
+        private Button btnE1;
     }
 }
