@@ -219,6 +219,7 @@
             Controls.Add(lblnum2);
             Controls.Add(lblnum1);
             Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ForeColor = SystemColors.ControlText;
             Margin = new Padding(4);
             Name = "OpAtms";
             Text = "Operadores Aritmeticos";
