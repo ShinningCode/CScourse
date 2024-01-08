@@ -24,6 +24,7 @@ namespace CScourseUdemy.Ejercicios
         }
         private void Ejercicio1()
         {
+            panelVisor.Controls.Clear();
             Ejercicio1 ctl = new Ejercicio1();
             ctl.titulo = button1.Text;
             ctl.Dock = DockStyle.Fill;
@@ -32,7 +33,9 @@ namespace CScourseUdemy.Ejercicios
         }
         private void Ejercicio2()
         {
+            panelVisor.Controls.Clear();
             Ejercicio2 ctl2 = new Ejercicio2();
+            ctl2.titulo2 = btnEjercicio2.Text;
             ctl2.Dock = DockStyle.Fill;
             panelVisor.Controls.Add(ctl2);
             ctl2.Show();

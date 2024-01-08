@@ -19,6 +19,7 @@ namespace CScourseUdemy.Ejercicios
         double radio;
         const double PI = Math.PI;
         double area, longitud;
+        public string titulo2;
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -35,10 +36,15 @@ namespace CScourseUdemy.Ejercicios
         }
         private void Calcular()
         {
-            area = PI * (Math.Pow(radio,2));
+            area = PI * (Math.Pow(radio, 2));
             longitud = 2 * PI * radio;
             lblresult1.Text = Convert.ToString(area);
             lblresult2.Text = Convert.ToString(longitud);
+        }
+
+        private void Ejercicio2_Load(object sender, EventArgs e)
+        {
+            lbltitulo2.Text = titulo2;
         }
     }
 }

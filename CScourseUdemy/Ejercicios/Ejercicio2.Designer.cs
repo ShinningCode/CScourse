@@ -39,7 +39,12 @@
             lblnum1 = new Label();
             label2 = new Label();
             lblresult2 = new Label();
+            gbx1 = new GroupBox();
+            label6 = new Label();
+            label4 = new Label();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            gbx1.SuspendLayout();
             SuspendLayout();
             // 
             // lbltitulo2
@@ -83,12 +88,12 @@
             btnCalcular.BackColor = Color.FromArgb(255, 224, 192);
             btnCalcular.BorderStyle = BorderStyle.Fixed3D;
             btnCalcular.Cursor = Cursors.Hand;
-            btnCalcular.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCalcular.Font = new Font("Trebuchet MS", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCalcular.ForeColor = SystemColors.ActiveCaptionText;
-            btnCalcular.Location = new Point(466, 377);
+            btnCalcular.Location = new Point(571, 358);
             btnCalcular.Margin = new Padding(4, 0, 4, 0);
             btnCalcular.Name = "btnCalcular";
-            btnCalcular.Size = new Size(156, 48);
+            btnCalcular.Size = new Size(116, 37);
             btnCalcular.TabIndex = 28;
             btnCalcular.Text = "Calcular";
             btnCalcular.TextAlign = ContentAlignment.MiddleCenter;
@@ -99,7 +104,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Consolas", 16F);
             label3.ForeColor = SystemColors.Control;
-            label3.Location = new Point(152, 428);
+            label3.Location = new Point(262, 424);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(84, 26);
@@ -111,7 +116,7 @@
             lblresult1.AutoSize = true;
             lblresult1.Font = new Font("Consolas", 16F);
             lblresult1.ForeColor = SystemColors.InactiveCaption;
-            lblresult1.Location = new Point(262, 428);
+            lblresult1.Location = new Point(372, 424);
             lblresult1.Margin = new Padding(4, 0, 4, 0);
             lblresult1.Name = "lblresult1";
             lblresult1.Size = new Size(36, 26);
@@ -123,7 +128,7 @@
             txtnum1.BackColor = Color.FromArgb(57, 57, 57);
             txtnum1.BorderStyle = BorderStyle.None;
             txtnum1.ForeColor = SystemColors.Info;
-            txtnum1.Location = new Point(185, 379);
+            txtnum1.Location = new Point(295, 375);
             txtnum1.Margin = new Padding(4);
             txtnum1.Name = "txtnum1";
             txtnum1.Size = new Size(239, 15);
@@ -132,7 +137,7 @@
             // panel3
             // 
             panel3.BackColor = SystemColors.HighlightText;
-            panel3.Location = new Point(185, 399);
+            panel3.Location = new Point(295, 395);
             panel3.Margin = new Padding(4);
             panel3.Name = "panel3";
             panel3.Size = new Size(239, 2);
@@ -143,7 +148,7 @@
             lblnum1.AutoSize = true;
             lblnum1.Font = new Font("Consolas", 12F);
             lblnum1.ForeColor = SystemColors.ButtonHighlight;
-            lblnum1.Location = new Point(152, 377);
+            lblnum1.Location = new Point(262, 373);
             lblnum1.Margin = new Padding(4, 0, 4, 0);
             lblnum1.Name = "lblnum1";
             lblnum1.Size = new Size(27, 19);
@@ -155,7 +160,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Consolas", 16F);
             label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(152, 468);
+            label2.Location = new Point(262, 464);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(132, 26);
@@ -167,18 +172,70 @@
             lblresult2.AutoSize = true;
             lblresult2.Font = new Font("Consolas", 16F);
             lblresult2.ForeColor = SystemColors.InactiveCaption;
-            lblresult2.Location = new Point(292, 468);
+            lblresult2.Location = new Point(402, 464);
             lblresult2.Margin = new Padding(4, 0, 4, 0);
             lblresult2.Name = "lblresult2";
             lblresult2.Size = new Size(36, 26);
             lblresult2.TabIndex = 29;
             lblresult2.Text = "- ";
             // 
+            // gbx1
+            // 
+            gbx1.Controls.Add(label6);
+            gbx1.Controls.Add(label4);
+            gbx1.Controls.Add(label5);
+            gbx1.Dock = DockStyle.Left;
+            gbx1.Font = new Font("Consolas", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gbx1.ForeColor = SystemColors.GradientActiveCaption;
+            gbx1.Location = new Point(0, 347);
+            gbx1.Name = "gbx1";
+            gbx1.Size = new Size(213, 176);
+            gbx1.TabIndex = 30;
+            gbx1.TabStop = false;
+            gbx1.Text = "Formulas";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Consolas", 8F);
+            label6.ForeColor = SystemColors.ButtonHighlight;
+            label6.Location = new Point(117, 63);
+            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(13, 13);
+            label6.TabIndex = 31;
+            label6.Text = "2";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Consolas", 12F);
+            label4.ForeColor = SystemColors.Control;
+            label4.Location = new Point(7, 107);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(189, 19);
+            label4.TabIndex = 31;
+            label4.Text = "Longitud = 2 * π * r";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Consolas", 12F);
+            label5.ForeColor = SystemColors.Control;
+            label5.Location = new Point(7, 67);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(117, 19);
+            label5.TabIndex = 32;
+            label5.Text = "Área = π * r";
+            // 
             // Ejercicio2
             // 
             AutoScaleDimensions = new SizeF(7F, 14F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(57, 57, 57);
+            Controls.Add(gbx1);
             Controls.Add(lblresult2);
             Controls.Add(btnCalcular);
             Controls.Add(label2);
@@ -192,8 +249,11 @@
             Controls.Add(lbltitulo2);
             Font = new Font("Consolas", 9F);
             Name = "Ejercicio2";
-            Size = new Size(750, 603);
+            Size = new Size(750, 523);
+            Load += Ejercicio2_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            gbx1.ResumeLayout(false);
+            gbx1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -211,5 +271,9 @@
         private Label lblnum1;
         private Label label2;
         private Label lblresult2;
+        private GroupBox gbx1;
+        private Label label6;
+        private Label label4;
+        private Label label5;
     }
 }
