@@ -16,5 +16,10 @@ namespace CScourseUdemy.Ejercicios
         {
             InitializeComponent();
         }
+
+        private void lblnum1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

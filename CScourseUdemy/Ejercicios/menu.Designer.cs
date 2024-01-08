@@ -30,9 +30,10 @@
         {
             panel1 = new Panel();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            btnE1 = new Button();
             button1 = new Button();
             label1 = new Label();
-            btnE1 = new Button();
+            panelVisor = new FlowLayoutPanel();
             panel1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -59,13 +60,28 @@
             flowLayoutPanel1.Size = new Size(192, 390);
             flowLayoutPanel1.TabIndex = 2;
             // 
+            // btnE1
+            // 
+            btnE1.BackColor = Color.FromArgb(54, 54, 54);
+            btnE1.FlatAppearance.BorderSize = 0;
+            btnE1.FlatStyle = FlatStyle.Flat;
+            btnE1.ForeColor = SystemColors.ButtonHighlight;
+            btnE1.Location = new Point(0, 0);
+            btnE1.Margin = new Padding(0);
+            btnE1.Name = "btnE1";
+            btnE1.Size = new Size(172, 52);
+            btnE1.TabIndex = 1;
+            btnE1.Text = "Ejercicio 1\r\n{Operadores logicos}";
+            btnE1.UseVisualStyleBackColor = false;
+            btnE1.Click += button2_Click;
+            // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(54, 54, 54);
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(3, 3);
+            button1.Location = new Point(3, 55);
             button1.Name = "button1";
             button1.Size = new Size(172, 52);
             button1.TabIndex = 0;
@@ -85,20 +101,13 @@
             label1.Text = "Ejercicios";
             label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // btnE1
+            // panelVisor
             // 
-            btnE1.BackColor = Color.FromArgb(54, 54, 54);
-            btnE1.FlatAppearance.BorderSize = 0;
-            btnE1.FlatStyle = FlatStyle.Flat;
-            btnE1.ForeColor = SystemColors.ButtonHighlight;
-            btnE1.Location = new Point(6, 7);
-            btnE1.Margin = new Padding(0);
-            btnE1.Name = "btnE1";
-            btnE1.Size = new Size(172, 52);
-            btnE1.TabIndex = 1;
-            btnE1.Text = "Ejercicio 1\r\n{Operadores logicos}";
-            btnE1.UseVisualStyleBackColor = false;
-            btnE1.Click += button2_Click;
+            panelVisor.Dock = DockStyle.Fill;
+            panelVisor.Location = new Point(192, 0);
+            panelVisor.Name = "panelVisor";
+            panelVisor.Size = new Size(608, 420);
+            panelVisor.TabIndex = 1;
             // 
             // menu
             // 
@@ -106,6 +115,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(27, 27, 27);
             ClientSize = new Size(800, 420);
+            Controls.Add(panelVisor);
             Controls.Add(panel1);
             Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ForeColor = SystemColors.ControlLight;
@@ -123,5 +133,6 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private Button button1;
         private Button btnE1;
+        private FlowLayoutPanel panelVisor;
     }
 }
