@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            lbltitulo = new Label();
             pictureBox1 = new PictureBox();
             label2 = new Label();
             panel1 = new Panel();
@@ -48,25 +48,25 @@
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // lbltitulo
             // 
-            label1.Dock = DockStyle.Top;
-            label1.Font = new Font("Consolas", 15.75F);
-            label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(744, 51);
-            label1.TabIndex = 0;
-            label1.Text = "Ejercicio 1";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
+            lbltitulo.Dock = DockStyle.Top;
+            lbltitulo.Font = new Font("Consolas", 15.75F);
+            lbltitulo.ForeColor = SystemColors.ButtonFace;
+            lbltitulo.Location = new Point(0, 0);
+            lbltitulo.Name = "lbltitulo";
+            lbltitulo.Size = new Size(744, 78);
+            lbltitulo.TabIndex = 0;
+            lbltitulo.Text = "Ejercicio 1";
+            lbltitulo.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // pictureBox1
             // 
             pictureBox1.Dock = DockStyle.Top;
             pictureBox1.Image = Properties.Resources.Untitled;
-            pictureBox1.Location = new Point(0, 51);
+            pictureBox1.Location = new Point(0, 78);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(744, 183);
+            pictureBox1.Size = new Size(744, 152);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -76,7 +76,7 @@
             label2.Dock = DockStyle.Top;
             label2.Font = new Font("Consolas", 15F);
             label2.ForeColor = SystemColors.ActiveCaption;
-            label2.Location = new Point(0, 234);
+            label2.Location = new Point(0, 230);
             label2.Name = "label2";
             label2.Size = new Size(744, 49);
             label2.TabIndex = 2;
@@ -98,7 +98,7 @@
             panel1.Controls.Add(lblnum2);
             panel1.Controls.Add(lblnum1);
             panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 283);
+            panel1.Location = new Point(0, 279);
             panel1.Name = "panel1";
             panel1.Size = new Size(744, 210);
             panel1.TabIndex = 3;
@@ -143,6 +143,7 @@
             lblresult.Size = new Size(36, 26);
             lblresult.TabIndex = 15;
             lblresult.Text = "- ";
+            lblresult.Click += lblresult_Click;
             // 
             // txtnum3
             // 
@@ -249,10 +250,11 @@
             Controls.Add(panel1);
             Controls.Add(label2);
             Controls.Add(pictureBox1);
-            Controls.Add(label1);
+            Controls.Add(lbltitulo);
             Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "Ejercicio1";
             Size = new Size(744, 502);
+            Load += Ejercicio1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -261,7 +263,7 @@
 
         #endregion
 
-        private Label label1;
+        private Label lbltitulo;
         private PictureBox pictureBox1;
         private Label label2;
         private Panel panel1;

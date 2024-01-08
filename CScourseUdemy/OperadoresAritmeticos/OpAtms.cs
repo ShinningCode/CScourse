@@ -103,5 +103,9 @@ namespace CScourseUdemy.OperadoresAritmeticos
             }
         }
 
+        private void lblresult_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

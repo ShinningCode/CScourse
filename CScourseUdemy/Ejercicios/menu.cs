@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CScourseUdemy.Ejercicios;
+
 namespace CScourseUdemy.Ejercicios
 {
-    public partial class menu : Form
+    public partial class Menu : Form
     {
-        public menu()
+        public Menu()
         {
             InitializeComponent();
         }
@@ -21,23 +21,20 @@ namespace CScourseUdemy.Ejercicios
         {
             Ejercicio1();
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void Ejercicio1()
         {
-            //E1 frm = new E1();
-            //frm.ShowDialog();
+            Ejercicio1 ctl = new Ejercicio1();
+            ctl.titulo = button1.Text;
+            ctl.Dock = DockStyle.Fill;
+            panelVisor.Controls.Add(ctl);
+            ctl.Show();
         }
 
         private void panelVisor_Paint(object sender, PaintEventArgs e)
         {
 
         }
-        private void Ejercicio1()
-        {
-            Ejercicio1 ctl = new Ejercicio1();
-            ctl.Dock = DockStyle.Fill;
-            panelVisor.Controls.Add(ctl);
-            ctl.Show();
-        }
+     
+
     }
 }

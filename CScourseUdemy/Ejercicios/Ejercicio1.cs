@@ -17,7 +17,7 @@ namespace CScourseUdemy.Ejercicios
             InitializeComponent();
         }
         double a, b, c, result;
-
+        public string titulo;
         private void lblnum1_Click(object sender, EventArgs e)
         {
 
@@ -32,7 +32,7 @@ namespace CScourseUdemy.Ejercicios
             a = Convert.ToDouble(txtnum1.Text);
             b = Convert.ToDouble(txtnum2.Text);
             c = Convert.ToDouble(txtnum3.Text);
-            result = Convert.ToDouble(lblresult.Text);
+
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
@@ -42,9 +42,19 @@ namespace CScourseUdemy.Ejercicios
         }
         private void Calcular()
         {
-            
-            result = (c + 5) * (Math.Pow(b, 2) - 3 * (a * c) * (Math.Pow(a, 2))) / (4 * a);
+
+            result = ((c + 5) * (Math.Pow(b, 2) - 3 * a * c) * Math.Pow(a, 2)) / (4 * a);
             lblresult.Text = result.ToString();
+        }
+
+        private void lblresult_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Ejercicio1_Load(object sender, EventArgs e)
+        {
+            lbltitulo.Text = titulo;
         }
     }
 }

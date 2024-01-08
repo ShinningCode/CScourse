@@ -132,6 +132,7 @@
             lblresult.Size = new Size(27, 19);
             lblresult.TabIndex = 6;
             lblresult.Text = "- ";
+            lblresult.Click += lblresult_Click;
             // 
             // label1
             // 

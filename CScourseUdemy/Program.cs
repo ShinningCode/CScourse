@@ -14,7 +14,7 @@ namespace CScourseUdemy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new menu()); // Se cambia Form1 a el otro prycto
+            Application.Run(new Menu()); // Se cambia Form1 a el otro prycto
         }
     }
 }
