@@ -31,6 +31,7 @@
             panel1 = new Panel();
             flowLayoutPanel1 = new FlowLayoutPanel();
             button1 = new Button();
+            btnEjercicio2 = new Button();
             label1 = new Label();
             panelVisor = new Panel();
             panel1.SuspendLayout();
@@ -50,6 +51,7 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.Controls.Add(button1);
+            flowLayoutPanel1.Controls.Add(btnEjercicio2);
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.ForeColor = SystemColors.ActiveCaptionText;
             flowLayoutPanel1.Location = new Point(0, 30);
@@ -72,6 +74,21 @@
             button1.Text = "Ejercicio 1\r\n{Operadores Aritmeticos}\r\n";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
+            // 
+            // btnEjercicio2
+            // 
+            btnEjercicio2.BackColor = Color.FromArgb(54, 54, 54);
+            btnEjercicio2.FlatAppearance.BorderSize = 0;
+            btnEjercicio2.FlatStyle = FlatStyle.Flat;
+            btnEjercicio2.Font = new Font("Consolas", 12F);
+            btnEjercicio2.ForeColor = SystemColors.ButtonHighlight;
+            btnEjercicio2.Location = new Point(3, 84);
+            btnEjercicio2.Name = "btnEjercicio2";
+            btnEjercicio2.Size = new Size(186, 75);
+            btnEjercicio2.TabIndex = 1;
+            btnEjercicio2.Text = "Ejercicio 2\r\n{Radio y Longitud de un Circulo}\r\n";
+            btnEjercicio2.UseVisualStyleBackColor = false;
+            btnEjercicio2.Click += btn2;
             // 
             // label1
             // 
@@ -118,5 +135,6 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private Button button1;
         private Panel panelVisor;
+        private Button btnEjercicio2;
     }
 }

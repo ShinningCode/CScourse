@@ -20,6 +20,7 @@ namespace CScourseUdemy.Ejercicios
         private void button1_Click(object sender, EventArgs e)
         {
             Ejercicio1();
+            
         }
         private void Ejercicio1()
         {
@@ -29,12 +30,23 @@ namespace CScourseUdemy.Ejercicios
             panelVisor.Controls.Add(ctl);
             ctl.Show();
         }
+        private void Ejercicio2()
+        {
+            Ejercicio2 ctl2 = new Ejercicio2();
+            ctl2.Dock = DockStyle.Fill;
+            panelVisor.Controls.Add(ctl2);
+            ctl2.Show();
+        }
+
 
         private void panelVisor_Paint(object sender, PaintEventArgs e)
         {
 
         }
-     
 
+        private void btn2(object sender, EventArgs e)
+        {
+            Ejercicio2();
+        }
     }
 }
