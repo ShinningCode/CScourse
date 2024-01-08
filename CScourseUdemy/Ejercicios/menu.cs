@@ -19,13 +19,25 @@ namespace CScourseUdemy.Ejercicios
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Ejercicio1();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            E1 frm = new E1();
-            frm.ShowDialog();
+            //E1 frm = new E1();
+            //frm.ShowDialog();
+        }
+
+        private void panelVisor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void Ejercicio1()
+        {
+            Ejercicio1 ctl = new Ejercicio1();
+            ctl.Dock = DockStyle.Fill;
+            panelVisor.Controls.Add(ctl);
+            ctl.Show();
         }
     }
 }

@@ -1,6 +1,7 @@
 using CScourseUdemy.OperadoresAritmeticos; // Importando carpeta de proyecto
 using CScourseUdemy.OperadoresRelacionales;
 using CScourseUdemy.Operadores_Logicos;
+using CScourseUdemy.Ejercicios;
 namespace CScourseUdemy
 {
     internal static class Program
@@ -11,10 +12,9 @@ namespace CScourseUdemy
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new OpLog()); // Se cambia Form1 a el otro prycto
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new menu()); // Se cambia Form1 a el otro prycto
         }
     }
 }
