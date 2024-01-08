@@ -32,6 +32,7 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             button1 = new Button();
             btnEjercicio2 = new Button();
+            btn3 = new Button();
             label1 = new Label();
             panelVisor = new Panel();
             panel1.SuspendLayout();
@@ -52,6 +53,7 @@
             // 
             flowLayoutPanel1.Controls.Add(button1);
             flowLayoutPanel1.Controls.Add(btnEjercicio2);
+            flowLayoutPanel1.Controls.Add(btn3);
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.ForeColor = SystemColors.ActiveCaptionText;
             flowLayoutPanel1.Location = new Point(0, 30);
@@ -89,6 +91,21 @@
             btnEjercicio2.Text = "Ejercicio 2\r\n{Radio y Longitud de un Circulo}\r\n";
             btnEjercicio2.UseVisualStyleBackColor = false;
             btnEjercicio2.Click += btn2;
+            // 
+            // btn3
+            // 
+            btn3.BackColor = Color.FromArgb(54, 54, 54);
+            btn3.FlatAppearance.BorderSize = 0;
+            btn3.FlatStyle = FlatStyle.Flat;
+            btn3.Font = new Font("Consolas", 12F);
+            btn3.ForeColor = SystemColors.ButtonHighlight;
+            btn3.Location = new Point(3, 165);
+            btn3.Name = "btn3";
+            btn3.Size = new Size(186, 75);
+            btn3.TabIndex = 2;
+            btn3.Text = "Ejercicio 3\r\n{Calculo de IMC}\r\n";
+            btn3.UseVisualStyleBackColor = false;
+            btn3.Click += btn3_Click;
             // 
             // label1
             // 
@@ -136,5 +153,6 @@
         private Button button1;
         private Panel panelVisor;
         private Button btnEjercicio2;
+        private Button btn3;
     }
 }

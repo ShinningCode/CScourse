@@ -107,5 +107,10 @@ namespace CScourseUdemy.OperadoresAritmeticos
         {
 
         }
+
+        private void txtnum1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

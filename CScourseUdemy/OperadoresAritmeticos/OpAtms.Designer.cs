@@ -92,6 +92,7 @@
             txtnum1.Name = "txtnum1";
             txtnum1.Size = new Size(246, 19);
             txtnum1.TabIndex = 2;
+            txtnum1.TextChanged += txtnum1_TextChanged;
             // 
             // panel1
             // 
