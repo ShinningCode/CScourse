@@ -41,6 +41,7 @@
             lblnum2 = new Label();
             lblnum1 = new Label();
             lblestado = new Label();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -164,24 +165,24 @@
             lblnum2.AutoSize = true;
             lblnum2.Font = new Font("Consolas", 12F);
             lblnum2.ForeColor = SystemColors.ButtonHighlight;
-            lblnum2.Location = new Point(196, 418);
+            lblnum2.Location = new Point(158, 418);
             lblnum2.Margin = new Padding(4, 0, 4, 0);
             lblnum2.Name = "lblnum2";
-            lblnum2.Size = new Size(72, 19);
+            lblnum2.Size = new Size(108, 19);
             lblnum2.TabIndex = 18;
-            lblnum2.Text = "Altura:";
+            lblnum2.Text = "Altura (m):";
             // 
             // lblnum1
             // 
             lblnum1.AutoSize = true;
             lblnum1.Font = new Font("Consolas", 12F);
             lblnum1.ForeColor = SystemColors.ButtonHighlight;
-            lblnum1.Location = new Point(212, 367);
+            lblnum1.Location = new Point(167, 367);
             lblnum1.Margin = new Padding(4, 0, 4, 0);
             lblnum1.Name = "lblnum1";
-            lblnum1.Size = new Size(54, 19);
+            lblnum1.Size = new Size(99, 19);
             lblnum1.TabIndex = 19;
-            lblnum1.Text = "Peso:";
+            lblnum1.Text = "Peso (kg):";
             // 
             // lblestado
             // 
@@ -195,6 +196,18 @@
             lblestado.TabIndex = 29;
             lblestado.Text = "- ";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Consolas", 16F);
+            label2.ForeColor = SystemColors.Control;
+            label2.Location = new Point(158, 531);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(108, 26);
+            label2.TabIndex = 26;
+            label2.Text = "Estado =";
+            // 
             // IMC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -202,6 +215,7 @@
             BackColor = Color.FromArgb(57, 57, 57);
             Controls.Add(lblestado);
             Controls.Add(btnCalcular);
+            Controls.Add(label2);
             Controls.Add(label3);
             Controls.Add(lblresult);
             Controls.Add(txtnum2);
@@ -236,5 +250,6 @@
         private Label lblnum2;
         private Label lblnum1;
         private Label lblestado;
+        private Label label2;
     }
 }

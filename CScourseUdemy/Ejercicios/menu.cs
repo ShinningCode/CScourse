@@ -52,7 +52,7 @@ namespace CScourseUdemy.Ejercicios
         private void Ejercicio3()
         {
             panelVisor.Controls.Clear();
-            Ejercicio3 ctl3 = new Ejercicio3();
+            IMC ctl3 = new IMC();
             ctl3.titulo3 = btn3.Text;
             ctl3.Dock = DockStyle.Fill;
             panelVisor.Controls.Add(ctl3);
