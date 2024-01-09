@@ -58,6 +58,7 @@
             lbltitulo2.TabIndex = 0;
             lbltitulo2.Text = "Ejercicio 2";
             lbltitulo2.TextAlign = ContentAlignment.MiddleLeft;
+            lbltitulo2.Click += lbltitulo2_Click;
             // 
             // pictureBox1
             // 

@@ -19,7 +19,7 @@ namespace CScourseUdemy.Ejercicios
         public string titulo4;
         private void Casacas_Load(object sender, EventArgs e)
         {
-
+            lbltitulo.Text = titulo4;
         }
 
         private void Calcular()
@@ -50,7 +50,7 @@ namespace CScourseUdemy.Ejercicios
                 detalle += "Color Rojo \r\n";
             }
             txtCarrito.Text = detalle;
-            label3.Text = total.ToString();
+           
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -59,6 +59,11 @@ namespace CScourseUdemy.Ejercicios
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbltitulo_Click(object sender, EventArgs e)
         {
 
         }

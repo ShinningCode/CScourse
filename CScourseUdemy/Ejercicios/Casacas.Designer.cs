@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            lbltitulo = new Label();
             pictureBox1 = new PictureBox();
             groupBox1 = new GroupBox();
             rbtnl = new RadioButton();
@@ -47,17 +47,18 @@
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // lbltitulo
             // 
-            label1.Dock = DockStyle.Top;
-            label1.Font = new Font("Consolas", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(732, 64);
-            label1.TabIndex = 0;
-            label1.Text = "Ejercicio 4";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
+            lbltitulo.Dock = DockStyle.Top;
+            lbltitulo.Font = new Font("Consolas", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbltitulo.ForeColor = SystemColors.ButtonFace;
+            lbltitulo.Location = new Point(0, 0);
+            lbltitulo.Name = "lbltitulo";
+            lbltitulo.Size = new Size(732, 64);
+            lbltitulo.TabIndex = 0;
+            lbltitulo.Text = "Ejercicio 4";
+            lbltitulo.TextAlign = ContentAlignment.MiddleLeft;
+            lbltitulo.Click += lbltitulo_Click;
             // 
             // pictureBox1
             // 
@@ -226,7 +227,7 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(pictureBox1);
-            Controls.Add(label1);
+            Controls.Add(lbltitulo);
             Font = new Font("Consolas", 9F);
             Name = "Casacas";
             Size = new Size(732, 555);
@@ -242,7 +243,7 @@
 
         #endregion
 
-        private Label label1;
+        private Label lbltitulo;
         private PictureBox pictureBox1;
         private GroupBox groupBox1;
         private RadioButton rbtnl;

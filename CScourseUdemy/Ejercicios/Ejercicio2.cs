@@ -46,5 +46,10 @@ namespace CScourseUdemy.Ejercicios
         {
             lbltitulo2.Text = titulo2;
         }
+
+        private void lbltitulo2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
