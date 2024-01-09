@@ -31,6 +31,10 @@ namespace CScourseUdemy.Ejercicios
         {
             Ejercicio3();
         }
+        private void btn4_Click(object sender, EventArgs e)
+        {
+            Ejercicio4();
+        }
         private void Ejercicio1()
         {
             panelVisor.Controls.Clear();
@@ -66,5 +70,14 @@ namespace CScourseUdemy.Ejercicios
         }
 
         
+        private void Ejercicio4()
+        {
+            panelVisor.Controls.Clear();
+            Casacas ctl4 = new Casacas();
+            //ctl4.titulo3 = btn3.Text;
+            ctl4.Dock = DockStyle.Fill;
+            panelVisor.Controls.Add(ctl4);
+            ctl4.Show();
+        }
     }
 }
