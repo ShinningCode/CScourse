@@ -82,7 +82,7 @@
             groupBox2.ForeColor = SystemColors.ButtonHighlight;
             groupBox2.Location = new Point(393, 41);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(339, 273);
+            groupBox2.Size = new Size(339, 423);
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
             groupBox2.Text = "Teclado Numerico";
@@ -92,7 +92,7 @@
             panelNumerico.Controls.Add(btn0);
             panelNumerico.Location = new Point(20, 35);
             panelNumerico.Name = "panelNumerico";
-            panelNumerico.Size = new Size(293, 218);
+            panelNumerico.Size = new Size(293, 368);
             panelNumerico.TabIndex = 0;
             // 
             // btn0
@@ -105,7 +105,7 @@
             btn0.Name = "btn0";
             btn0.Size = new Size(75, 66);
             btn0.TabIndex = 0;
-            btn0.Text = "0";
+            btn0.Text = "Hola";
             btn0.UseVisualStyleBackColor = true;
             btn0.Click += btn0_Click;
             // 
@@ -114,7 +114,7 @@
             AutoScaleDimensions = new SizeF(7F, 14F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 29, 29);
-            ClientSize = new Size(800, 420);
+            ClientSize = new Size(800, 496);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Font = new Font("Consolas", 9F);

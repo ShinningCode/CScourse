@@ -21,7 +21,6 @@ namespace CScourseUdemy.Listas
         {
             //AgregarLista();
             AgregarArray();
-            GenerarBotones();
 
         }
         private void AgregarLista()
@@ -53,7 +52,6 @@ namespace CScourseUdemy.Listas
 
         private void btn0_Click(object sender, EventArgs e)
         {
-            AgregarArray();
         }
         private void GenerarBotones()
         {
@@ -62,7 +60,10 @@ namespace CScourseUdemy.Listas
             foreach (char data in numeros)
             {
                 Button btn = new Button();
-                btn.Text = numeros.ToString();
+                btn.Text = data.ToString();
+                btn.Size = new Size(75, 66);
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.ForeColor = Color.FromArgb(192,192,255); //Colores RGB 
                 panelNumerico.Controls.Add(btn);
             }
         }
