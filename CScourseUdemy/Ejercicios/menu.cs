@@ -35,6 +35,11 @@ namespace CScourseUdemy.Ejercicios
         {
             Ejercicio4();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Ejercicio5();
+        }
         private void Ejercicio1()
         {
             panelVisor.Controls.Clear();
@@ -62,14 +67,22 @@ namespace CScourseUdemy.Ejercicios
             panelVisor.Controls.Add(ctl3);
             ctl3.Show();
         }
-
+        private void Ejercicio5()
+        {
+            panelVisor.Controls.Clear();
+            Ejercicio5 ctl5 = new Ejercicio5();
+            //ctl5.titulo3 = btn3.Text;
+            ctl5.Dock = DockStyle.Fill;
+            panelVisor.Controls.Add(ctl5);
+            ctl5.Show();
+        }
 
         private void panelVisor_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        
+
         private void Ejercicio4()
         {
             panelVisor.Controls.Clear();
@@ -79,5 +92,6 @@ namespace CScourseUdemy.Ejercicios
             panelVisor.Controls.Add(ctl4);
             ctl4.Show();
         }
+
     }
 }

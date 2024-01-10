@@ -36,6 +36,7 @@
             btn4 = new Label();
             label1 = new Label();
             panelVisor = new Panel();
+            label2 = new Label();
             panel1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -56,6 +57,7 @@
             flowLayoutPanel1.Controls.Add(btnEjercicio2);
             flowLayoutPanel1.Controls.Add(btn3);
             flowLayoutPanel1.Controls.Add(btn4);
+            flowLayoutPanel1.Controls.Add(label2);
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.ForeColor = SystemColors.ActiveCaptionText;
             flowLayoutPanel1.Location = new Point(0, 30);
@@ -90,7 +92,7 @@
             btnEjercicio2.ForeColor = SystemColors.ButtonHighlight;
             btnEjercicio2.Location = new Point(3, 84);
             btnEjercicio2.Name = "btnEjercicio2";
-            btnEjercicio2.Size = new Size(186, 75);
+            btnEjercicio2.Size = new Size(186, 65);
             btnEjercicio2.TabIndex = 1;
             btnEjercicio2.Text = "Ejercicio 2\r\n{Radio y Longitud de un Circulo}\r\n";
             btnEjercicio2.UseVisualStyleBackColor = false;
@@ -104,9 +106,9 @@
             btn3.FlatStyle = FlatStyle.Flat;
             btn3.Font = new Font("Consolas", 12F);
             btn3.ForeColor = SystemColors.ButtonHighlight;
-            btn3.Location = new Point(3, 165);
+            btn3.Location = new Point(3, 155);
             btn3.Name = "btn3";
-            btn3.Size = new Size(186, 75);
+            btn3.Size = new Size(186, 55);
             btn3.TabIndex = 2;
             btn3.Text = "Ejercicio 3\r\n{Calculo de IMC}\r\n";
             btn3.UseVisualStyleBackColor = false;
@@ -118,9 +120,9 @@
             btn4.Cursor = Cursors.Hand;
             btn4.Font = new Font("Consolas", 12F);
             btn4.ForeColor = SystemColors.ButtonHighlight;
-            btn4.Location = new Point(3, 243);
+            btn4.Location = new Point(3, 213);
             btn4.Name = "btn4";
-            btn4.Size = new Size(186, 80);
+            btn4.Size = new Size(186, 54);
             btn4.TabIndex = 3;
             btn4.Text = "Ejercicio 4 { if Condicionales }";
             btn4.TextAlign = ContentAlignment.MiddleCenter;
@@ -145,6 +147,20 @@
             panelVisor.Name = "panelVisor";
             panelVisor.Size = new Size(608, 420);
             panelVisor.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.BackColor = Color.FromArgb(54, 54, 54);
+            label2.Cursor = Cursors.Hand;
+            label2.Font = new Font("Consolas", 12F);
+            label2.ForeColor = SystemColors.ButtonHighlight;
+            label2.Location = new Point(3, 267);
+            label2.Name = "label2";
+            label2.Size = new Size(186, 80);
+            label2.TabIndex = 4;
+            label2.Text = "Ejercicio 5 { Pares / impares}";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            label2.Click += label2_Click;
             // 
             // Menu
             // 
@@ -174,5 +190,6 @@
         private Button btnEjercicio2;
         private Button btn3;
         private Label btn4;
+        private Label label2;
     }
 }
