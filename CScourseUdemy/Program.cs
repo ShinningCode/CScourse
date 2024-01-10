@@ -3,6 +3,7 @@ using CScourseUdemy.OperadoresRelacionales;
 using CScourseUdemy.Operadores_Logicos;
 using CScourseUdemy.Ejercicios; //Para utilizar el proyecto Ejercicios
 using CScourseUdemy.Condicionales;
+using CScourseUdemy.Listas;
 namespace CScourseUdemy
 {
     internal static class Program
@@ -15,7 +16,7 @@ namespace CScourseUdemy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu()); // Se cambia Form1 a el otro prycto
+            Application.Run(new FrmListas()); // Se cambia Form1 a el otro prycto
         }
     }
 }
