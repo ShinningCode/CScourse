@@ -21,7 +21,8 @@ namespace CScourseUdemy.Listas
         {
             //AgregarLista();
             AgregarArray();
-            
+            GenerarBotones();
+
         }
         private void AgregarLista()
         {
@@ -36,18 +37,39 @@ namespace CScourseUdemy.Listas
             //{
             //    lstLista.Items.Add(nombres[i]);
             //}
-            foreach(string datos in nombres)
+            foreach (string datos in nombres)
             {
                 lstLista.Items.Add(datos);
             }
         }
         private void AgregarArray()
         {
-            string[] nombres = new string[] { "Edgar", "Yamil", "Maya","Alec","May" };
-            foreach(string datos in nombres)
+            string[] nombres = new string[] { "Edgar", "Yamil", "Maya", "Alec", "May" };
+            foreach (string datos in nombres)
             {
                 lstLista.Items.Add(datos);
             }
+        }
+
+        private void btn0_Click(object sender, EventArgs e)
+        {
+            AgregarArray();
+        }
+        private void GenerarBotones()
+        {
+            char[] numeros;
+            numeros = "0123456789".ToCharArray();
+            foreach (char data in numeros)
+            {
+                Button btn = new Button();
+                btn.Text = numeros.ToString();
+                panelNumerico.Controls.Add(btn);
+            }
+        }
+
+        private void FrmListas_Load(object sender, EventArgs e)
+        {
+            GenerarBotones();
         }
     }
 }
