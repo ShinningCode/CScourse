@@ -56,7 +56,8 @@ namespace CScourseUdemy.Listas
         private void GenerarBotones()
         {
             char[] numeros;
-            numeros = "0123456789".ToCharArray();
+            numeros = "123456789#0*".ToCharArray();
+            panelNumerico.Controls.Clear();
             foreach (char data in numeros)
             {
                 Button btn = new Button();
@@ -64,8 +65,16 @@ namespace CScourseUdemy.Listas
                 btn.Size = new Size(75, 66);
                 btn.FlatStyle = FlatStyle.Flat;
                 btn.ForeColor = Color.FromArgb(192,192,255); //Colores RGB 
+                btn.FlatAppearance.BorderSize=3;
                 panelNumerico.Controls.Add(btn);
+                btn.Click += Btn_Click;
             }
+        }
+
+        private void Btn_Click(object? sender, EventArgs e)
+        {
+            string numero  = ((Button)sender).Text;
+            txtPantalla.Text += numero;
         }
 
         private void FrmListas_Load(object sender, EventArgs e)

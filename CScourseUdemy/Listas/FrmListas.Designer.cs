@@ -32,11 +32,10 @@
             btnAgregar = new Button();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
+            txtPantalla = new TextBox();
             panelNumerico = new FlowLayoutPanel();
-            btn0 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
-            panelNumerico.SuspendLayout();
             SuspendLayout();
             // 
             // lstLista
@@ -77,44 +76,40 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(txtPantalla);
             groupBox2.Controls.Add(panelNumerico);
             groupBox2.Font = new Font("Consolas", 12F);
             groupBox2.ForeColor = SystemColors.ButtonHighlight;
             groupBox2.Location = new Point(393, 41);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(339, 423);
+            groupBox2.Size = new Size(282, 475);
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
             groupBox2.Text = "Teclado Numerico";
             // 
+            // txtPantalla
+            // 
+            txtPantalla.BackColor = Color.FromArgb(29, 29, 29);
+            txtPantalla.Font = new Font("Consolas", 14F);
+            txtPantalla.ForeColor = SystemColors.Info;
+            txtPantalla.Location = new Point(23, 25);
+            txtPantalla.Name = "txtPantalla";
+            txtPantalla.Size = new Size(239, 29);
+            txtPantalla.TabIndex = 5;
+            // 
             // panelNumerico
             // 
-            panelNumerico.Controls.Add(btn0);
-            panelNumerico.Location = new Point(20, 35);
+            panelNumerico.Location = new Point(21, 57);
             panelNumerico.Name = "panelNumerico";
-            panelNumerico.Size = new Size(293, 368);
+            panelNumerico.Size = new Size(256, 368);
             panelNumerico.TabIndex = 0;
-            // 
-            // btn0
-            // 
-            btn0.FlatAppearance.BorderColor = Color.White;
-            btn0.FlatAppearance.BorderSize = 2;
-            btn0.FlatStyle = FlatStyle.Flat;
-            btn0.Font = new Font("Consolas", 16F);
-            btn0.Location = new Point(3, 3);
-            btn0.Name = "btn0";
-            btn0.Size = new Size(75, 66);
-            btn0.TabIndex = 0;
-            btn0.Text = "Hola";
-            btn0.UseVisualStyleBackColor = true;
-            btn0.Click += btn0_Click;
             // 
             // FrmListas
             // 
             AutoScaleDimensions = new SizeF(7F, 14F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 29, 29);
-            ClientSize = new Size(800, 496);
+            ClientSize = new Size(800, 749);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Font = new Font("Consolas", 9F);
@@ -124,7 +119,7 @@
             Load += FrmListas_Load;
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
-            panelNumerico.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -134,6 +129,6 @@
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private FlowLayoutPanel panelNumerico;
-        private Button btn0;
+        private TextBox txtPantalla;
     }
 }
