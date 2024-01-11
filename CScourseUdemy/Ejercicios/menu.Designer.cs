@@ -34,9 +34,10 @@
             btnEjercicio2 = new Button();
             btn3 = new Button();
             btn4 = new Label();
+            label2 = new Label();
+            btn6 = new Label();
             label1 = new Label();
             panelVisor = new Panel();
-            label2 = new Label();
             panel1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -48,7 +49,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(192, 420);
+            panel1.Size = new Size(192, 580);
             panel1.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -58,12 +59,13 @@
             flowLayoutPanel1.Controls.Add(btn3);
             flowLayoutPanel1.Controls.Add(btn4);
             flowLayoutPanel1.Controls.Add(label2);
+            flowLayoutPanel1.Controls.Add(btn6);
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.ForeColor = SystemColors.ActiveCaptionText;
             flowLayoutPanel1.Location = new Point(0, 30);
             flowLayoutPanel1.Margin = new Padding(0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(192, 390);
+            flowLayoutPanel1.Size = new Size(192, 550);
             flowLayoutPanel1.TabIndex = 2;
             // 
             // button1
@@ -128,6 +130,34 @@
             btn4.TextAlign = ContentAlignment.MiddleCenter;
             btn4.Click += btn4_Click;
             // 
+            // label2
+            // 
+            label2.BackColor = Color.FromArgb(54, 54, 54);
+            label2.Cursor = Cursors.Hand;
+            label2.Font = new Font("Consolas", 12F);
+            label2.ForeColor = SystemColors.ButtonHighlight;
+            label2.Location = new Point(3, 267);
+            label2.Name = "label2";
+            label2.Size = new Size(186, 80);
+            label2.TabIndex = 4;
+            label2.Text = "Ejercicio 5 { Pares / impares}";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            label2.Click += label2_Click;
+            // 
+            // btn6
+            // 
+            btn6.BackColor = Color.FromArgb(54, 54, 54);
+            btn6.Cursor = Cursors.Hand;
+            btn6.Font = new Font("Consolas", 12F);
+            btn6.ForeColor = SystemColors.ButtonHighlight;
+            btn6.Location = new Point(3, 347);
+            btn6.Name = "btn6";
+            btn6.Size = new Size(186, 80);
+            btn6.TabIndex = 5;
+            btn6.Text = "Ejercicio 6 { Calculadora }";
+            btn6.TextAlign = ContentAlignment.MiddleCenter;
+            btn6.Click += label3_Click;
+            // 
             // label1
             // 
             label1.Dock = DockStyle.Top;
@@ -145,29 +175,15 @@
             panelVisor.Dock = DockStyle.Fill;
             panelVisor.Location = new Point(192, 0);
             panelVisor.Name = "panelVisor";
-            panelVisor.Size = new Size(608, 420);
+            panelVisor.Size = new Size(608, 580);
             panelVisor.TabIndex = 1;
-            // 
-            // label2
-            // 
-            label2.BackColor = Color.FromArgb(54, 54, 54);
-            label2.Cursor = Cursors.Hand;
-            label2.Font = new Font("Consolas", 12F);
-            label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(3, 267);
-            label2.Name = "label2";
-            label2.Size = new Size(186, 80);
-            label2.TabIndex = 4;
-            label2.Text = "Ejercicio 5 { Pares / impares}";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
-            label2.Click += label2_Click;
             // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 14F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(27, 27, 27);
-            ClientSize = new Size(800, 420);
+            ClientSize = new Size(800, 580);
             Controls.Add(panelVisor);
             Controls.Add(panel1);
             Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -191,5 +207,6 @@
         private Button btn3;
         private Label btn4;
         private Label label2;
+        private Label btn6;
     }
 }

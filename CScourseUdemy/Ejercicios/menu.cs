@@ -92,6 +92,18 @@ namespace CScourseUdemy.Ejercicios
             panelVisor.Controls.Add(ctl4);
             ctl4.Show();
         }
-
+        private void Calculadora()
+        {
+            panelVisor.Controls.Clear();
+            Calculadora ctl = new Calculadora();
+            ctl.titulo = btn6.Text;
+            ctl.Dock = DockStyle.Fill;
+            panelVisor.Controls.Add(ctl);
+            ctl.Show();
+        }
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Calculadora();
+        }
     }
 }
