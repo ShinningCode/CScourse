@@ -103,5 +103,14 @@ namespace CScourseUdemy.OperadoresAritmeticos
             }
         }
 
+        private void lblresult_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnum1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
