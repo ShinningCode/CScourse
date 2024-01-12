@@ -19,7 +19,7 @@ namespace CScourseUdemy.Ejercicios
         public string titulo;
         string operacion;
         double num1, num2, resultado;
-        bool reiniciar = false;
+        bool reiniciar = false,punto = true;
         private void panelNumeros_Paint(object sender, PaintEventArgs e)
         {
 
@@ -52,12 +52,31 @@ namespace CScourseUdemy.Ejercicios
         {
             ReiniciarProceso();
             string numeroString = ((Button)sender).Text;
-
-            if (txtPantalla1.Text == "0")
+            if (numeroString == ".")
             {
-                txtPantalla1.Clear();
+                punto = true;
+                if(txtPantalla1.Text.Contains("."))
+                {
+                    punto = false;
+                }
+                if (punto == true)
+                {
+                    if(txtPantalla1.Text != "")
+                    {
+                        txtPantalla1.Text += ".";
+                    }
+                }
             }
-            txtPantalla1.Text += numeroString;
+            else
+            {
+
+                if (txtPantalla1.Text == "0")
+                {
+                    txtPantalla1.Clear();
+                }
+                txtPantalla1.Text += numeroString;
+  
+            }
         }
 
         private void Calculadora_Load(object sender, EventArgs e)
