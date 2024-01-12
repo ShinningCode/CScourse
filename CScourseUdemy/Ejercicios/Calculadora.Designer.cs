@@ -31,9 +31,10 @@
             panel1 = new Panel();
             lblText = new Label();
             panel2 = new Panel();
+            lblResult = new Label();
             button1 = new Button();
-            label1 = new Label();
-            textBox2 = new TextBox();
+            lblOperacion = new Label();
+            txtPantalla1 = new TextBox();
             flowLayoutPanel2 = new FlowLayoutPanel();
             btnAc = new Button();
             btnPors = new Button();
@@ -78,9 +79,10 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(25, 26, 28);
+            panel2.Controls.Add(lblResult);
             panel2.Controls.Add(button1);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(textBox2);
+            panel2.Controls.Add(lblOperacion);
+            panel2.Controls.Add(txtPantalla1);
             panel2.Controls.Add(flowLayoutPanel2);
             panel2.Controls.Add(flowLayoutPanel1);
             panel2.Controls.Add(panelNumeros);
@@ -89,9 +91,23 @@
             panel2.Size = new Size(168, 300);
             panel2.TabIndex = 1;
             // 
+            // lblResult
+            // 
+            lblResult.BackColor = Color.FromArgb(25, 26, 28);
+            lblResult.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblResult.ForeColor = Color.White;
+            lblResult.Location = new Point(65, 3);
+            lblResult.Name = "lblResult";
+            lblResult.Size = new Size(100, 14);
+            lblResult.TabIndex = 8;
+            lblResult.Text = "0";
+            lblResult.TextAlign = ContentAlignment.TopRight;
+            // 
             // button1
             // 
             button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Image = Properties.Resources.doc;
             button1.Location = new Point(4, 53);
@@ -100,30 +116,31 @@
             button1.TabIndex = 7;
             button1.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblOperacion
             // 
-            label1.BackColor = Color.FromArgb(25, 26, 28);
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label1.ForeColor = Color.FromArgb(51, 177, 134);
-            label1.Location = new Point(65, 26);
-            label1.Name = "label1";
-            label1.Size = new Size(100, 14);
-            label1.TabIndex = 6;
-            label1.Text = "0";
-            label1.TextAlign = ContentAlignment.TopRight;
+            lblOperacion.BackColor = Color.FromArgb(25, 26, 28);
+            lblOperacion.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblOperacion.ForeColor = Color.FromArgb(51, 177, 134);
+            lblOperacion.Location = new Point(65, 26);
+            lblOperacion.Name = "lblOperacion";
+            lblOperacion.Size = new Size(100, 14);
+            lblOperacion.TabIndex = 6;
+            lblOperacion.Text = "0";
+            lblOperacion.TextAlign = ContentAlignment.TopRight;
             // 
-            // textBox2
+            // txtPantalla1
             // 
-            textBox2.BackColor = Color.FromArgb(25, 26, 28);
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Verdana", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.ForeColor = SystemColors.Window;
-            textBox2.Location = new Point(33, 43);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(132, 36);
-            textBox2.TabIndex = 5;
-            textBox2.Text = "0";
-            textBox2.TextAlign = HorizontalAlignment.Right;
+            txtPantalla1.BackColor = Color.FromArgb(25, 26, 28);
+            txtPantalla1.BorderStyle = BorderStyle.None;
+            txtPantalla1.Font = new Font("Verdana", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPantalla1.ForeColor = SystemColors.Window;
+            txtPantalla1.Location = new Point(33, 43);
+            txtPantalla1.Name = "txtPantalla1";
+            txtPantalla1.ReadOnly = true;
+            txtPantalla1.Size = new Size(132, 36);
+            txtPantalla1.TabIndex = 5;
+            txtPantalla1.Text = "0";
+            txtPantalla1.TextAlign = HorizontalAlignment.Right;
             // 
             // flowLayoutPanel2
             // 
@@ -138,9 +155,11 @@
             // btnAc
             // 
             btnAc.BackgroundImage = Properties.Resources.elipse__;
-            btnAc.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAc.BackgroundImageLayout = ImageLayout.Stretch;
             btnAc.Cursor = Cursors.Hand;
             btnAc.FlatAppearance.BorderSize = 0;
+            btnAc.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnAc.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnAc.FlatStyle = FlatStyle.Flat;
             btnAc.Font = new Font("Segoe UI", 8F, FontStyle.Bold);
             btnAc.ForeColor = Color.Black;
@@ -157,6 +176,8 @@
             btnPors.BackgroundImageLayout = ImageLayout.Zoom;
             btnPors.Cursor = Cursors.Hand;
             btnPors.FlatAppearance.BorderSize = 0;
+            btnPors.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnPors.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnPors.FlatStyle = FlatStyle.Flat;
             btnPors.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnPors.ForeColor = Color.Black;
@@ -173,6 +194,8 @@
             BtnOff.BackgroundImageLayout = ImageLayout.Zoom;
             BtnOff.Cursor = Cursors.Hand;
             BtnOff.FlatAppearance.BorderSize = 0;
+            BtnOff.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            BtnOff.FlatAppearance.MouseOverBackColor = Color.Transparent;
             BtnOff.FlatStyle = FlatStyle.Flat;
             BtnOff.Font = new Font("Segoe UI", 8F, FontStyle.Bold);
             BtnOff.ForeColor = Color.Black;
@@ -185,7 +208,7 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.BackColor = Color.FromArgb(29, 29, 29);
+            flowLayoutPanel1.BackColor = Color.FromArgb(25, 26, 28);
             flowLayoutPanel1.Controls.Add(btnPlus);
             flowLayoutPanel1.Controls.Add(btnMinus);
             flowLayoutPanel1.Controls.Add(btnMult);
@@ -202,6 +225,8 @@
             btnPlus.BackgroundImageLayout = ImageLayout.Zoom;
             btnPlus.Cursor = Cursors.Hand;
             btnPlus.FlatAppearance.BorderSize = 0;
+            btnPlus.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnPlus.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnPlus.FlatStyle = FlatStyle.Flat;
             btnPlus.Font = new Font("Segoe UI", 8F, FontStyle.Bold);
             btnPlus.ForeColor = Color.Black;
@@ -218,6 +243,8 @@
             btnMinus.BackgroundImageLayout = ImageLayout.Zoom;
             btnMinus.Cursor = Cursors.Hand;
             btnMinus.FlatAppearance.BorderSize = 0;
+            btnMinus.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnMinus.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnMinus.FlatStyle = FlatStyle.Flat;
             btnMinus.Font = new Font("Segoe UI", 8F, FontStyle.Bold);
             btnMinus.ForeColor = Color.Black;
@@ -234,6 +261,8 @@
             btnMult.BackgroundImageLayout = ImageLayout.Zoom;
             btnMult.Cursor = Cursors.Hand;
             btnMult.FlatAppearance.BorderSize = 0;
+            btnMult.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnMult.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnMult.FlatStyle = FlatStyle.Flat;
             btnMult.Font = new Font("Segoe UI", 8F, FontStyle.Bold);
             btnMult.ForeColor = Color.Black;
@@ -250,6 +279,8 @@
             btnDiv.BackgroundImageLayout = ImageLayout.Zoom;
             btnDiv.Cursor = Cursors.Hand;
             btnDiv.FlatAppearance.BorderSize = 0;
+            btnDiv.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnDiv.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnDiv.FlatStyle = FlatStyle.Flat;
             btnDiv.Font = new Font("Segoe UI", 8F, FontStyle.Bold);
             btnDiv.ForeColor = Color.Black;
@@ -259,6 +290,7 @@
             btnDiv.TabIndex = 19;
             btnDiv.Text = "/";
             btnDiv.UseVisualStyleBackColor = true;
+            btnDiv.Click += btnDiv_Click;
             // 
             // btnEquals
             // 
@@ -266,6 +298,8 @@
             btnEquals.BackgroundImageLayout = ImageLayout.Zoom;
             btnEquals.Cursor = Cursors.Hand;
             btnEquals.FlatAppearance.BorderSize = 0;
+            btnEquals.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnEquals.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnEquals.FlatStyle = FlatStyle.Flat;
             btnEquals.Font = new Font("Segoe UI", 8F, FontStyle.Bold);
             btnEquals.ForeColor = Color.Black;
@@ -275,6 +309,7 @@
             btnEquals.TabIndex = 20;
             btnEquals.Text = "=";
             btnEquals.UseVisualStyleBackColor = true;
+            btnEquals.Click += btnEquals_Click;
             // 
             // panelNumeros
             // 
@@ -318,8 +353,9 @@
         private Button btnMult;
         private Button btnDiv;
         private Button btnEquals;
-        private TextBox textBox2;
-        private Label label1;
+        private TextBox txtPantalla1;
+        private Label lblOperacion;
         private Button button1;
+        private Label lblResult;
     }
 }
