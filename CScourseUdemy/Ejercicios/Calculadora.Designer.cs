@@ -60,7 +60,7 @@
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(26, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(652, 481);
+            panel1.Size = new Size(652, 449);
             panel1.TabIndex = 3;
             // 
             // lblText
@@ -70,7 +70,7 @@
             lblText.ForeColor = SystemColors.ButtonHighlight;
             lblText.Location = new Point(0, 0);
             lblText.Name = "lblText";
-            lblText.Size = new Size(160, 481);
+            lblText.Size = new Size(160, 449);
             lblText.TabIndex = 2;
             lblText.Text = "Ejercicio 6";
             lblText.TextAlign = ContentAlignment.MiddleLeft;
@@ -86,9 +86,9 @@
             panel2.Controls.Add(flowLayoutPanel2);
             panel2.Controls.Add(flowLayoutPanel1);
             panel2.Controls.Add(panelNumeros);
-            panel2.Location = new Point(241, 116);
+            panel2.Location = new Point(241, 108);
             panel2.Name = "panel2";
-            panel2.Size = new Size(168, 300);
+            panel2.Size = new Size(168, 280);
             panel2.TabIndex = 1;
             // 
             // lblResult
@@ -98,35 +98,39 @@
             lblResult.ForeColor = Color.White;
             lblResult.Location = new Point(65, 3);
             lblResult.Name = "lblResult";
-            lblResult.Size = new Size(100, 14);
+            lblResult.Size = new Size(100, 13);
             lblResult.TabIndex = 8;
             lblResult.Text = "0";
             lblResult.TextAlign = ContentAlignment.TopRight;
+            lblResult.Visible = false;
             // 
             // button1
             // 
+            button1.Cursor = Cursors.Hand;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Image = Properties.Resources.doc;
-            button1.Location = new Point(4, 53);
+            button1.Location = new Point(4, 49);
             button1.Name = "button1";
-            button1.Size = new Size(23, 26);
+            button1.Size = new Size(23, 24);
             button1.TabIndex = 7;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // lblOperacion
             // 
             lblOperacion.BackColor = Color.FromArgb(25, 26, 28);
             lblOperacion.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             lblOperacion.ForeColor = Color.FromArgb(51, 177, 134);
-            lblOperacion.Location = new Point(65, 26);
+            lblOperacion.Location = new Point(65, 24);
             lblOperacion.Name = "lblOperacion";
-            lblOperacion.Size = new Size(100, 14);
+            lblOperacion.Size = new Size(100, 13);
             lblOperacion.TabIndex = 6;
             lblOperacion.Text = "0";
             lblOperacion.TextAlign = ContentAlignment.TopRight;
+            lblOperacion.Visible = false;
             // 
             // txtPantalla1
             // 
@@ -134,7 +138,7 @@
             txtPantalla1.BorderStyle = BorderStyle.None;
             txtPantalla1.Font = new Font("Verdana", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtPantalla1.ForeColor = SystemColors.Window;
-            txtPantalla1.Location = new Point(33, 43);
+            txtPantalla1.Location = new Point(33, 40);
             txtPantalla1.Name = "txtPantalla1";
             txtPantalla1.ReadOnly = true;
             txtPantalla1.Size = new Size(132, 36);
@@ -147,9 +151,9 @@
             flowLayoutPanel2.Controls.Add(btnAc);
             flowLayoutPanel2.Controls.Add(btnPors);
             flowLayoutPanel2.Controls.Add(BtnOff);
-            flowLayoutPanel2.Location = new Point(3, 85);
+            flowLayoutPanel2.Location = new Point(3, 79);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(123, 40);
+            flowLayoutPanel2.Size = new Size(123, 37);
             flowLayoutPanel2.TabIndex = 2;
             // 
             // btnAc
@@ -165,10 +169,11 @@
             btnAc.ForeColor = Color.Black;
             btnAc.Location = new Point(3, 3);
             btnAc.Name = "btnAc";
-            btnAc.Size = new Size(35, 35);
+            btnAc.Size = new Size(35, 33);
             btnAc.TabIndex = 13;
             btnAc.Text = "AC";
             btnAc.UseVisualStyleBackColor = true;
+            btnAc.Click += btnAc_Click;
             // 
             // btnPors
             // 
@@ -183,10 +188,11 @@
             btnPors.ForeColor = Color.Black;
             btnPors.Location = new Point(44, 3);
             btnPors.Name = "btnPors";
-            btnPors.Size = new Size(35, 35);
+            btnPors.Size = new Size(35, 33);
             btnPors.TabIndex = 14;
             btnPors.Text = "%";
             btnPors.UseVisualStyleBackColor = true;
+            btnPors.Click += btnPors_Click;
             // 
             // BtnOff
             // 
@@ -201,10 +207,11 @@
             BtnOff.ForeColor = Color.Black;
             BtnOff.Location = new Point(85, 3);
             BtnOff.Name = "BtnOff";
-            BtnOff.Size = new Size(35, 35);
+            BtnOff.Size = new Size(35, 33);
             BtnOff.TabIndex = 15;
             BtnOff.Text = "OFF";
             BtnOff.UseVisualStyleBackColor = true;
+            BtnOff.Click += BtnOff_Click;
             // 
             // flowLayoutPanel1
             // 
@@ -214,9 +221,9 @@
             flowLayoutPanel1.Controls.Add(btnMult);
             flowLayoutPanel1.Controls.Add(btnDiv);
             flowLayoutPanel1.Controls.Add(btnEquals);
-            flowLayoutPanel1.Location = new Point(129, 85);
+            flowLayoutPanel1.Location = new Point(129, 79);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(39, 215);
+            flowLayoutPanel1.Size = new Size(39, 201);
             flowLayoutPanel1.TabIndex = 1;
             // 
             // btnPlus
@@ -232,10 +239,11 @@
             btnPlus.ForeColor = Color.Black;
             btnPlus.Location = new Point(3, 3);
             btnPlus.Name = "btnPlus";
-            btnPlus.Size = new Size(35, 35);
+            btnPlus.Size = new Size(35, 33);
             btnPlus.TabIndex = 16;
             btnPlus.Text = "+";
             btnPlus.UseVisualStyleBackColor = true;
+            btnPlus.Click += btnPlus_Click;
             // 
             // btnMinus
             // 
@@ -248,12 +256,13 @@
             btnMinus.FlatStyle = FlatStyle.Flat;
             btnMinus.Font = new Font("Segoe UI", 8F, FontStyle.Bold);
             btnMinus.ForeColor = Color.Black;
-            btnMinus.Location = new Point(3, 44);
+            btnMinus.Location = new Point(3, 42);
             btnMinus.Name = "btnMinus";
-            btnMinus.Size = new Size(35, 35);
+            btnMinus.Size = new Size(35, 33);
             btnMinus.TabIndex = 17;
             btnMinus.Text = "-";
             btnMinus.UseVisualStyleBackColor = true;
+            btnMinus.Click += btnMinus_Click;
             // 
             // btnMult
             // 
@@ -266,12 +275,13 @@
             btnMult.FlatStyle = FlatStyle.Flat;
             btnMult.Font = new Font("Segoe UI", 8F, FontStyle.Bold);
             btnMult.ForeColor = Color.Black;
-            btnMult.Location = new Point(3, 85);
+            btnMult.Location = new Point(3, 81);
             btnMult.Name = "btnMult";
-            btnMult.Size = new Size(35, 35);
+            btnMult.Size = new Size(35, 33);
             btnMult.TabIndex = 18;
             btnMult.Text = "x";
             btnMult.UseVisualStyleBackColor = true;
+            btnMult.Click += btnMult_Click;
             // 
             // btnDiv
             // 
@@ -284,9 +294,9 @@
             btnDiv.FlatStyle = FlatStyle.Flat;
             btnDiv.Font = new Font("Segoe UI", 8F, FontStyle.Bold);
             btnDiv.ForeColor = Color.Black;
-            btnDiv.Location = new Point(3, 126);
+            btnDiv.Location = new Point(3, 120);
             btnDiv.Name = "btnDiv";
-            btnDiv.Size = new Size(35, 35);
+            btnDiv.Size = new Size(35, 33);
             btnDiv.TabIndex = 19;
             btnDiv.Text = "/";
             btnDiv.UseVisualStyleBackColor = true;
@@ -303,9 +313,9 @@
             btnEquals.FlatStyle = FlatStyle.Flat;
             btnEquals.Font = new Font("Segoe UI", 8F, FontStyle.Bold);
             btnEquals.ForeColor = Color.Black;
-            btnEquals.Location = new Point(3, 167);
+            btnEquals.Location = new Point(3, 159);
             btnEquals.Name = "btnEquals";
-            btnEquals.Size = new Size(35, 35);
+            btnEquals.Size = new Size(35, 33);
             btnEquals.TabIndex = 20;
             btnEquals.Text = "=";
             btnEquals.UseVisualStyleBackColor = true;
@@ -314,20 +324,21 @@
             // panelNumeros
             // 
             panelNumeros.BackColor = Color.FromArgb(25, 26, 28);
-            panelNumeros.Location = new Point(3, 129);
+            panelNumeros.Location = new Point(3, 120);
             panelNumeros.Name = "panelNumeros";
-            panelNumeros.Size = new Size(123, 171);
+            panelNumeros.Size = new Size(123, 160);
             panelNumeros.TabIndex = 0;
             panelNumeros.Paint += panelNumeros_Paint;
             // 
             // Calculadora
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(7F, 14F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 29, 29);
             Controls.Add(panel1);
+            Font = new Font("Consolas", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Name = "Calculadora";
-            Size = new Size(678, 484);
+            Size = new Size(678, 452);
             Load += Calculadora_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);

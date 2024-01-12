@@ -19,6 +19,7 @@ namespace CScourseUdemy.Ejercicios
         public string titulo;
         string operacion;
         double num1, num2, resultado;
+        bool reiniciar = false;
         private void panelNumeros_Paint(object sender, PaintEventArgs e)
         {
 
@@ -49,6 +50,7 @@ namespace CScourseUdemy.Ejercicios
 
         private void Btns_Click(object? sender, EventArgs e)
         {
+            ReiniciarProceso();
             string numeroString = ((Button)sender).Text;
 
             if (txtPantalla1.Text == "0")
@@ -77,6 +79,9 @@ namespace CScourseUdemy.Ejercicios
                 lblResult.Text = txtPantalla1.Text;
                 lblOperacion.Text = operacion;
                 txtPantalla1.Text = "0";
+
+                lblResult.Visible = true;
+                lblOperacion.Visible = true;
             }
         }
         private void Asignar()
@@ -85,32 +90,139 @@ namespace CScourseUdemy.Ejercicios
             num2 = Convert.ToDouble(txtPantalla1.Text);
 
         }
-
+        //--------BOTONES--------------------------
         private void btnDiv_Click(object sender, EventArgs e)
         {
             operacion = btnDiv.Text;
             Operaciones();
         }
-
+        private void btnMult_Click(object sender, EventArgs e)
+        {
+            operacion = btnMult.Text;
+            Operaciones();
+        }
+        private void btnPlus_Click(object sender, EventArgs e)
+        {
+            operacion = btnPlus.Text;
+            Operaciones();
+        }
+        private void btnMinus_Click(object sender, EventArgs e)
+        {
+            operacion = btnMinus.Text;
+            Operaciones();
+        }
+        private void btnPors_Click(object sender, EventArgs e)
+        {
+            operacion = btnPors.Text;
+            Operaciones();
+        }
+        //-------LIMPIAR--PANTALLA--------
+        private void btnAc_Click(object sender, EventArgs e)
+        {
+            Borrar();
+        }
+        //-------RESOLVER--OPERACION-------
         private void btnEquals_Click(object sender, EventArgs e)
         {
             Calcular();
         }
+        //---------SALIR----------------------------------------
+        private void BtnOff_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        //--------COPIAR-EN-PORTAPAPELES-----------------------
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(txtPantalla1.Text);
+        }
+
+        //-----------------------------------------------------
         private void Calcular()
         {
             Asignar();
-            if(lblOperacion.Text == btnDiv.Text)
+            if (lblOperacion.Text == btnDiv.Text)
             {
-                Dividir();    
+                Dividir();
             }
+            if (lblOperacion.Text == btnMult.Text)
+            {
+                Multiplicar();
+            }
+            if (lblOperacion.Text == btnPlus.Text)
+            {
+                Sumar();
+            }
+            if (lblOperacion.Text == btnMinus.Text)
+            {
+                Restar();
+            }
+            if (lblOperacion.Text == btnPors.Text)
+            {
+                Porcentaje();
+            }
+            //if (lblOperacion.Text == btnAc.Text)
+            //{
+            //    Borrar();
+            //}
+
+        }
+        private void ReiniciarProceso()
+        {
+            if (reiniciar == true)
+            {
+                txtPantalla1.Text = "0";
+                reiniciar = false;
+            }
+        }
+        private void Limpiar()
+        {
+            reiniciar = true;
+            lblOperacion.Text = "0";
+            lblResult.Text = "0";
+            lblOperacion.Visible=false;
+            lblResult.Visible=false;
         }
         private void Dividir()
         {
             resultado = num1 / num2;
             txtPantalla1.Text = resultado.ToString();
+
+            Limpiar();
+        }
+        private void Multiplicar()
+        {
+            resultado = num1 * num2;
+            txtPantalla1.Text = resultado.ToString();
+            Limpiar();
+        }
+        private void Sumar()
+        {
+            resultado = num1 + num2;
+            txtPantalla1.Text = resultado.ToString();
+            Limpiar();
+        }
+        private void Restar()
+        {
+            resultado = num1 - num2;
+            txtPantalla1.Text = resultado.ToString();
+            Limpiar();
+        }
+        private void Porcentaje()
+        {
+            resultado = num1 * num2 / 100;
+            txtPantalla1.Text = resultado.ToString();
+            Limpiar();
+        }
+        private void Borrar()
+        {
+            txtPantalla1.Text = "0";
             lblOperacion.Text = "0";
             lblResult.Text = "0";
+
         }
+
+
     }
 
 }
