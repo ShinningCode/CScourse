@@ -1,23 +1,33 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Data;
-
+using CScourseUdemy.Logica;
+using System.Windows.Forms;
 
 public class Dclientes
 {
 
-    public InsertarClientes()
+    public void InsertarClientes(Lclientes parametros)
     {
         try
         {
             CONEXIONMAESTRA.abrir();
             SqlCommand cmd = new SqlCommand("InsertarClientes", CONEXIONMAESTRA.conectar);
-            cmd.CommandType
-        }
-        catch (Exception)
-        {
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Codigo", parametros.Codigo);
+            cmd.Parameters.AddWithValue("@Nombres", parametros.Nombres);
+            cmd.Parameters.AddWithValue("@Edad", parametros.Edad);
+            cmd.ExecuteNonQuery();
 
-            throw;
+
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message); // o StackTrace
+        }
+        finally
+        {
+            CONEXIONMAESTRA.cerrar();
         }
     }
 
