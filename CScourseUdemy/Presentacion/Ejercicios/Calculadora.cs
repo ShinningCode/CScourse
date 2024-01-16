@@ -19,7 +19,7 @@ namespace CScourseUdemy.Ejercicios
         public string titulo;
         string operacion;
         double num1, num2, resultado;
-        bool reiniciar = false,punto = true;
+        bool reiniciar = false, punto = true;
         private void panelNumeros_Paint(object sender, PaintEventArgs e)
         {
 
@@ -55,13 +55,13 @@ namespace CScourseUdemy.Ejercicios
             if (numeroString == ".")
             {
                 punto = true;
-                if(txtPantalla1.Text.Contains("."))
+                if (txtPantalla1.Text.Contains("."))
                 {
                     punto = false;
                 }
                 if (punto == true)
                 {
-                    if(txtPantalla1.Text != "")
+                    if (txtPantalla1.Text != "")
                     {
                         txtPantalla1.Text += ".";
                     }
@@ -75,7 +75,7 @@ namespace CScourseUdemy.Ejercicios
                     txtPantalla1.Clear();
                 }
                 txtPantalla1.Text += numeroString;
-  
+
             }
         }
 
@@ -199,8 +199,8 @@ namespace CScourseUdemy.Ejercicios
             reiniciar = true;
             lblOperacion.Text = "0";
             lblResult.Text = "0";
-            lblOperacion.Visible=false;
-            lblResult.Visible=false;
+            lblOperacion.Visible = false;
+            lblResult.Visible = false;
         }
         private void Dividir()
         {
@@ -241,7 +241,10 @@ namespace CScourseUdemy.Ejercicios
 
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 
 }

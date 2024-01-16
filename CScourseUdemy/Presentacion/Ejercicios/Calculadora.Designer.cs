@@ -62,6 +62,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(652, 449);
             panel1.TabIndex = 3;
+            panel1.Paint += panel1_Paint;
             // 
             // lblText
             // 
@@ -106,6 +107,7 @@
             // 
             // button1
             // 
+            button1.BackgroundImageLayout = ImageLayout.None;
             button1.Cursor = Cursors.Hand;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatAppearance.MouseDownBackColor = Color.Transparent;

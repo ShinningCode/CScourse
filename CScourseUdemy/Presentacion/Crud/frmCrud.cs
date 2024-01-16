@@ -1,10 +1,25 @@
-﻿namespace CScourseUdemy
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace CScourseUdemy.Presentacion.Crud
 {
-    public partial class Crud : Form
+    public partial class frmCrud : Form
     {
-        public Crud()
+        public frmCrud()
         {
             InitializeComponent();
+        }
+
+        private void frmCrud_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
