@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Data;
-using CScourseUdemy.Logica;
 using System.Windows.Forms;
-
 public class Dclientes
 {
 
@@ -18,7 +16,7 @@ public class Dclientes
             cmd.Parameters.AddWithValue("@Nombres", parametros.Nombres);
             cmd.Parameters.AddWithValue("@Edad", parametros.Edad);
             cmd.ExecuteNonQuery();
-
+            MessageBox.Show("Cliente Registrado");
 
         }
         catch (Exception ex)

@@ -17,7 +17,7 @@ namespace CScourseUdemy.Ejercicios
             InitializeComponent();
         }
         double num1, num2;
-        bool resultado;
+        //bool resultado;
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 

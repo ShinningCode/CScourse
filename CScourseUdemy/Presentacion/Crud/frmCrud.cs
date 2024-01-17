@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using System.Windows.Forms;
 
 namespace CScourseUdemy.Presentacion.Crud
@@ -20,6 +13,20 @@ namespace CScourseUdemy.Presentacion.Crud
         private void frmCrud_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            InsertarClientes();
+        }
+        private void InsertarClientes() { 
+            Dclientes funcion = new Dclientes();
+            Lclientes parametros = new Lclientes();
+            parametros.Codigo = Convert.ToInt32(txtCodigo.Text);
+            parametros.Nombres = txtNombres.Text;
+            parametros.Edad = Convert.ToInt32(txtEdad.Text);
+
+            funcion.InsertarClientes(parametros);
         }
     }
 }

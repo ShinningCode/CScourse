@@ -1,5 +1,6 @@
 ﻿using System;
-
+using System.Data.SqlClient;
+using System.Data;
 public class CONEXIONMAESTRA
 {   //-----------------------------------NOMBRE DE DISPOSITIVO (VER EN MICROSOFT SQL)--------BASE DE DATOS------------------ACTIVADO
 	public static string conexion = @"Data source=DESKTOP-D6JQ9NG\SQLEXPRESS; Initial Catalog=BASECURSO; Itegrated Security=true";
@@ -19,7 +20,4 @@ public class CONEXIONMAESTRA
             conectar.Close();
         }
     }
-    public Class1()
-	{
-	}
 }
