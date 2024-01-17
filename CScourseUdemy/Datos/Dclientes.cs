@@ -28,5 +28,22 @@ public class Dclientes
             CONEXIONMAESTRA.cerrar();
         }
     }
+    public void MostrarClientes(ref DataTable dt)
+    {
+        try
+        {
+            CONEXIONMAESTRA.abrir();
+            SqlDataAdapter da = new SqlDataAdapter("Mostrar Clientes", CONEXIONMAESTRA.conectar);
+            da.Fill(dt);
+        }
+        catch (Exception ex)
+        {
 
+            MessageBox.Show(ex.Message);
+        }
+        finally
+        {
+            CONEXIONMAESTRA.cerrar();
+        }
+    }
 }

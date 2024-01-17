@@ -1,4 +1,5 @@
 ﻿
+using System.Data;
 using System.Windows.Forms;
 
 namespace CScourseUdemy.Presentacion.Crud
@@ -19,7 +20,8 @@ namespace CScourseUdemy.Presentacion.Crud
         {
             InsertarClientes();
         }
-        private void InsertarClientes() { 
+        private void InsertarClientes()
+        {
             Dclientes funcion = new Dclientes();
             Lclientes parametros = new Lclientes();
             parametros.Codigo = Convert.ToInt32(txtCodigo.Text);
@@ -27,6 +29,19 @@ namespace CScourseUdemy.Presentacion.Crud
             parametros.Edad = Convert.ToInt32(txtEdad.Text);
 
             funcion.InsertarClientes(parametros);
+            MostrarClientes();
+        }
+
+        private void datalist_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void MostrarClientes()
+        {
+            Dclientes funcion = new Dclientes();
+            DataTable dt = new DataTable();
+            funcion.MostrarClientes(ref dt);
+            datalist.DataSource = dt;
         }
     }
 }

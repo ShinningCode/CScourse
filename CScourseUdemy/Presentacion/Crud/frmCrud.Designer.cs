@@ -39,7 +39,9 @@
             panel1 = new Panel();
             panel2 = new Panel();
             pnl1 = new Panel();
+            datalist = new DataGridView();
             pnl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)datalist).BeginInit();
             SuspendLayout();
             // 
             // btnGuardar
@@ -165,6 +167,16 @@
             pnl1.Size = new Size(541, 199);
             pnl1.TabIndex = 17;
             // 
+            // datalist
+            // 
+            datalist.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            datalist.Location = new Point(12, 240);
+            datalist.Name = "datalist";
+            datalist.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            datalist.Size = new Size(541, 150);
+            datalist.TabIndex = 18;
+            datalist.CellContentClick += datalist_CellContentClick;
+            // 
             // frmCrud
             // 
             AutoScaleDimensions = new SizeF(7F, 14F);
@@ -172,6 +184,7 @@
             BackColor = Color.FromArgb(29, 29, 29);
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(800, 420);
+            Controls.Add(datalist);
             Controls.Add(pnl1);
             DoubleBuffered = true;
             Font = new Font("Consolas", 9F);
@@ -183,6 +196,7 @@
             Load += frmCrud_Load;
             pnl1.ResumeLayout(false);
             pnl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)datalist).EndInit();
             ResumeLayout(false);
         }
 
@@ -199,5 +213,6 @@
         private Panel panel1;
         private Panel panel2;
         private Panel pnl1;
+        private DataGridView datalist;
     }
 }
