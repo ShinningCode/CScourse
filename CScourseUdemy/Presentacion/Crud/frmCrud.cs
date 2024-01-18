@@ -57,8 +57,9 @@ namespace CScourseUdemy.Presentacion.Crud
             Lclientes parametros = new Lclientes();
             parametros.Idclientes = idcliente;
             parametros.Nombres = txtNombres.Text;
-            parametros.Edad = Convert.ToInt32(txtNombres.Text);
+            parametros.Edad = Convert.ToInt32(txtEdad.Text);
             funcion.EditarClientes(parametros);
+            MostrarClientes();
         }
 
         private void datalist_CellClick(object sender, DataGridViewCellEventArgs e)
