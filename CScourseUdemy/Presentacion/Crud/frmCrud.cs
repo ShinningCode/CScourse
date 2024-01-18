@@ -36,13 +36,11 @@ namespace CScourseUdemy.Presentacion.Crud
 
         private void datalist_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
         //private void datalist_CellClick(object sender, DataGridViewCellEventArgs e)
         //{
-        //    txtCodigo.Text = datalist.SelectedCells[1].Value.ToString();
-        //    txtNombres.Text = datalist.SelectedCells[2].Value.ToString();
-        //    txtEdad.Text = datalist.SelectedCells[3].Value.ToString();
+        //    
         //}
         private void MostrarClientes()
         {
@@ -67,12 +65,20 @@ namespace CScourseUdemy.Presentacion.Crud
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message); 
+                MessageBox.Show(ex.Message);
             }
-            finally{
+            finally
+            {
                 CONEXIONMAESTRA.cerrar();
             }
         }
+
+        private void datalist_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCodigo.Text = datalist.SelectedCells[1].Value.ToString();
+            txtNombres.Text = datalist.SelectedCells[2].Value.ToString();
+            txtEdad.Text = datalist.SelectedCells[3].Value.ToString();
+        }
     }
-       
+
 }

@@ -39,8 +39,8 @@
             panel1 = new Panel();
             panel2 = new Panel();
             pnl1 = new Panel();
-            datalist = new DataGridView();
             button1 = new Button();
+            datalist = new DataGridView();
             pnl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)datalist).BeginInit();
             SuspendLayout();
@@ -169,18 +169,6 @@
             pnl1.Size = new Size(541, 199);
             pnl1.TabIndex = 17;
             // 
-            // datalist
-            // 
-            datalist.AllowUserToAddRows = false;
-            datalist.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            datalist.Location = new Point(12, 240);
-            datalist.Name = "datalist";
-            datalist.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            datalist.Size = new Size(440, 240);
-            datalist.TabIndex = 18;
-            datalist.BackgroundColor = Color.FromArgb(29,29,29);
-            datalist.CellContentClick += datalist_CellContentClick;
-            // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(55, 180, 93);
@@ -192,6 +180,19 @@
             button1.TabIndex = 17;
             button1.Text = "Actualizar";
             button1.UseVisualStyleBackColor = false;
+            // 
+            // datalist
+            // 
+            datalist.AllowUserToAddRows = false;
+            datalist.BackgroundColor = Color.FromArgb(29, 29, 29);
+            datalist.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            datalist.Location = new Point(12, 240);
+            datalist.Name = "datalist";
+            datalist.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            datalist.Size = new Size(440, 240);
+            datalist.TabIndex = 18;
+            datalist.CellClick += datalist_CellClick;
+            datalist.CellContentClick += datalist_CellContentClick;
             // 
             // frmCrud
             // 
