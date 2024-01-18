@@ -64,15 +64,31 @@ namespace CScourseUdemy.Presentacion.Crud
 
         private void datalist_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            idcliente = Convert.ToInt32(datalist.SelectedCells[0].Value);
-            txtCodigo.Text = datalist.SelectedCells[1].Value.ToString();
-            txtNombres.Text = datalist.SelectedCells[2].Value.ToString();
-            txtEdad.Text = datalist.SelectedCells[3].Value.ToString();
+            if(datalist.Rows.Count > 0) {
+
+                idcliente = Convert.ToInt32(datalist.SelectedCells[0].Value);
+                txtCodigo.Text = datalist.SelectedCells[1].Value.ToString();
+                txtNombres.Text = datalist.SelectedCells[2].Value.ToString();
+                txtEdad.Text = datalist.SelectedCells[3].Value.ToString();
+            }
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             Actualizar();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Eliminar();
+        }
+        private void Eliminar()
+        {
+            Dclientes funcion = new Dclientes();
+            Lclientes parametros = new Lclientes();
+            parametros.Idclientes = idcliente;
+            funcion.EliminarClientes(parametros);
+            MostrarClientes();
         }
     }
 
