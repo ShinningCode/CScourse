@@ -11,7 +11,7 @@ namespace CScourseUdemy.Presentacion.Crud
         {
             InitializeComponent();
         }
-
+        int idcliente;
         private void frmCrud_Load(object sender, EventArgs e)
         {
             MostrarClientes();
@@ -50,34 +50,28 @@ namespace CScourseUdemy.Presentacion.Crud
             datalist.DataSource = dt;
         }
 
-        private void EditarClientes(Lclientes parametros)
+
+        private void Actualizar()
         {
-            try
-            {
-                CONEXIONMAESTRA.abrir();
-                SqlCommand cmd = new SqlCommand("EditarClientes", CONEXIONMAESTRA.conectar);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Idclientes", parametros.Idclientes);
-                cmd.Parameters.AddWithValue("@Nombres", parametros.Nombres);
-                cmd.Parameters.AddWithValue("@Edad", parametros.Edad);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Registro Actualizado");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                CONEXIONMAESTRA.cerrar();
-            }
+            Dclientes funcion = new Dclientes();
+            Lclientes parametros = new Lclientes();
+            parametros.Idclientes = idcliente;
+            parametros.Nombres = txtNombres.Text;
+            parametros.Edad = Convert.ToInt32(txtNombres.Text);
+            funcion.EditarClientes(parametros);
         }
 
         private void datalist_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            idcliente = Convert.ToInt32(datalist.SelectedCells[0].Value);
             txtCodigo.Text = datalist.SelectedCells[1].Value.ToString();
             txtNombres.Text = datalist.SelectedCells[2].Value.ToString();
             txtEdad.Text = datalist.SelectedCells[3].Value.ToString();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            Actualizar();
         }
     }
 

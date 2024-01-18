@@ -39,7 +39,7 @@
             panel1 = new Panel();
             panel2 = new Panel();
             pnl1 = new Panel();
-            button1 = new Button();
+            btnActualizar = new Button();
             datalist = new DataGridView();
             pnl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)datalist).BeginInit();
@@ -152,7 +152,7 @@
             // 
             pnl1.BackColor = Color.FromArgb(19, 19, 19);
             pnl1.BackgroundImageLayout = ImageLayout.Zoom;
-            pnl1.Controls.Add(button1);
+            pnl1.Controls.Add(btnActualizar);
             pnl1.Controls.Add(txtEdad);
             pnl1.Controls.Add(panel2);
             pnl1.Controls.Add(btnGuardar);
@@ -169,17 +169,18 @@
             pnl1.Size = new Size(541, 199);
             pnl1.TabIndex = 17;
             // 
-            // button1
+            // btnActualizar
             // 
-            button1.BackColor = Color.FromArgb(55, 180, 93);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(217, 151);
-            button1.Name = "button1";
-            button1.Size = new Size(91, 23);
-            button1.TabIndex = 17;
-            button1.Text = "Actualizar";
-            button1.UseVisualStyleBackColor = false;
+            btnActualizar.BackColor = Color.FromArgb(55, 180, 93);
+            btnActualizar.FlatStyle = FlatStyle.Flat;
+            btnActualizar.ForeColor = SystemColors.ActiveCaptionText;
+            btnActualizar.Location = new Point(217, 151);
+            btnActualizar.Name = "btnActualizar";
+            btnActualizar.Size = new Size(91, 23);
+            btnActualizar.TabIndex = 17;
+            btnActualizar.Text = "Actualizar";
+            btnActualizar.UseVisualStyleBackColor = false;
+            btnActualizar.Click += btnActualizar_Click;
             // 
             // datalist
             // 
@@ -231,6 +232,6 @@
         private Panel panel2;
         private Panel pnl1;
         private DataGridView datalist;
-        private Button button1;
+        private Button btnActualizar;
     }
 }
