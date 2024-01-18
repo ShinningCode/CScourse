@@ -28,29 +28,51 @@ public class Dclientes
             CONEXIONMAESTRA.cerrar();
         }
     }
-    public void EditarClientes(Lclientes parametros)
+    public void EliminarClientes(Lclientes parametros)
     {
         try
         {
             CONEXIONMAESTRA.abrir();
-            SqlCommand cmd = new SqlCommand("EditarClientes", CONEXIONMAESTRA.conectar);
-            cmd.CommandType = CommandType.StoredProcedure;
+            SqlCommand cmd = new SqlCommand("EliminarClientes",CONEXIONMAESTRA.conectar);
+            cmd.CommandType= CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@Idclientes", parametros.Idclientes);
-            cmd.Parameters.AddWithValue("@Nombres", parametros.Nombres);
-            cmd.Parameters.AddWithValue("@Edad", parametros.Edad);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Registro Actualizado");
+            cmd.ExecuteNonQuery ();
+            MessageBox.Show("Cliente Eliminado");
+
         }
         catch (Exception ex)
         {
+
             MessageBox.Show(ex.Message);
         }
         finally
         {
             CONEXIONMAESTRA.cerrar();
         }
-
     }
+    public void EditarClientes(Lclientes parametros)
+        {
+            try
+            {
+                CONEXIONMAESTRA.abrir();
+                SqlCommand cmd = new SqlCommand("EditarClientes", CONEXIONMAESTRA.conectar);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Idclientes", parametros.Idclientes);
+                cmd.Parameters.AddWithValue("@Nombres", parametros.Nombres);
+                cmd.Parameters.AddWithValue("@Edad", parametros.Edad);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Registro Actualizado");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                CONEXIONMAESTRA.cerrar();
+            }
+
+        }
     public void MostrarClientes(ref DataTable dt)
     {
         try

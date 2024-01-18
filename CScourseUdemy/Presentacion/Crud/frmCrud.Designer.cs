@@ -41,6 +41,7 @@
             pnl1 = new Panel();
             btnActualizar = new Button();
             datalist = new DataGridView();
+            btnEliminar = new Button();
             pnl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)datalist).BeginInit();
             SuspendLayout();
@@ -50,7 +51,7 @@
             btnGuardar.BackColor = Color.FromArgb(134, 204, 240);
             btnGuardar.FlatStyle = FlatStyle.Flat;
             btnGuardar.ForeColor = SystemColors.ActiveCaptionText;
-            btnGuardar.Location = new Point(136, 151);
+            btnGuardar.Location = new Point(40, 146);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(75, 23);
             btnGuardar.TabIndex = 0;
@@ -152,6 +153,7 @@
             // 
             pnl1.BackColor = Color.FromArgb(19, 19, 19);
             pnl1.BackgroundImageLayout = ImageLayout.Zoom;
+            pnl1.Controls.Add(btnEliminar);
             pnl1.Controls.Add(btnActualizar);
             pnl1.Controls.Add(txtEdad);
             pnl1.Controls.Add(panel2);
@@ -166,7 +168,7 @@
             pnl1.ForeColor = SystemColors.ActiveBorder;
             pnl1.Location = new Point(12, 12);
             pnl1.Name = "pnl1";
-            pnl1.Size = new Size(541, 199);
+            pnl1.Size = new Size(440, 199);
             pnl1.TabIndex = 17;
             // 
             // btnActualizar
@@ -174,7 +176,7 @@
             btnActualizar.BackColor = Color.FromArgb(55, 180, 93);
             btnActualizar.FlatStyle = FlatStyle.Flat;
             btnActualizar.ForeColor = SystemColors.ActiveCaptionText;
-            btnActualizar.Location = new Point(217, 151);
+            btnActualizar.Location = new Point(120, 146);
             btnActualizar.Name = "btnActualizar";
             btnActualizar.Size = new Size(91, 23);
             btnActualizar.TabIndex = 17;
@@ -194,6 +196,19 @@
             datalist.TabIndex = 18;
             datalist.CellClick += datalist_CellClick;
             datalist.CellContentClick += datalist_CellContentClick;
+            // 
+            // btnEliminar
+            // 
+            btnEliminar.BackColor = Color.FromArgb(255, 82, 66);
+            btnEliminar.FlatStyle = FlatStyle.Flat;
+            btnEliminar.ForeColor = SystemColors.ActiveCaptionText;
+            btnEliminar.Location = new Point(217, 146);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(91, 23);
+            btnEliminar.TabIndex = 18;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // frmCrud
             // 
@@ -233,5 +248,6 @@
         private Panel pnl1;
         private DataGridView datalist;
         private Button btnActualizar;
+        private Button btnEliminar;
     }
 }
