@@ -13,6 +13,7 @@ namespace CScourseUdemy.Presentacion.Crud
 
         private void frmCrud_Load(object sender, EventArgs e)
         {
+            MostrarClientes();
 
         }
 

@@ -173,8 +173,9 @@
             datalist.Location = new Point(12, 240);
             datalist.Name = "datalist";
             datalist.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            datalist.Size = new Size(541, 150);
+            datalist.Size = new Size(440, 240);
             datalist.TabIndex = 18;
+            datalist.BackgroundColor = Color.FromArgb(29,29,29);
             datalist.CellContentClick += datalist_CellContentClick;
             // 
             // frmCrud
