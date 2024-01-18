@@ -33,7 +33,7 @@ public class Dclientes
         try
         {
             CONEXIONMAESTRA.abrir();
-            SqlDataAdapter da = new SqlDataAdapter("Mostrar Clientes", CONEXIONMAESTRA.conectar);
+            SqlDataAdapter da = new SqlDataAdapter("MostrarClientes", CONEXIONMAESTRA.conectar);
             da.Fill(dt);
         }
         catch (Exception ex)
