@@ -65,7 +65,7 @@
             txtNombres.ForeColor = SystemColors.Info;
             txtNombres.Location = new Point(136, 61);
             txtNombres.Name = "txtNombres";
-            txtNombres.Size = new Size(180, 19);
+            txtNombres.Size = new Size(200, 19);
             txtNombres.TabIndex = 12;
             // 
             // txtCodigo
@@ -76,7 +76,7 @@
             txtCodigo.ForeColor = SystemColors.Info;
             txtCodigo.Location = new Point(136, 26);
             txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new Size(180, 19);
+            txtCodigo.Size = new Size(200, 19);
             txtCodigo.TabIndex = 13;
             // 
             // label4
@@ -109,7 +109,7 @@
             txtEdad.ForeColor = SystemColors.Info;
             txtEdad.Location = new Point(136, 100);
             txtEdad.Name = "txtEdad";
-            txtEdad.Size = new Size(180, 19);
+            txtEdad.Size = new Size(200, 19);
             txtEdad.TabIndex = 16;
             // 
             // panel3
@@ -117,7 +117,7 @@
             panel3.BackColor = Color.White;
             panel3.Location = new Point(136, 120);
             panel3.Name = "panel3";
-            panel3.Size = new Size(180, 2);
+            panel3.Size = new Size(200, 2);
             panel3.TabIndex = 15;
             // 
             // label1
@@ -136,7 +136,7 @@
             panel1.BackColor = Color.White;
             panel1.Location = new Point(136, 82);
             panel1.Name = "panel1";
-            panel1.Size = new Size(180, 2);
+            panel1.Size = new Size(200, 2);
             panel1.TabIndex = 16;
             // 
             // panel2
@@ -144,7 +144,7 @@
             panel2.BackColor = Color.White;
             panel2.Location = new Point(136, 48);
             panel2.Name = "panel2";
-            panel2.Size = new Size(180, 2);
+            panel2.Size = new Size(200, 2);
             panel2.TabIndex = 16;
             // 
             // pnl1
@@ -169,6 +169,7 @@
             // 
             // datalist
             // 
+            datalist.AllowUserToAddRows = false;
             datalist.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             datalist.Location = new Point(12, 240);
             datalist.Name = "datalist";
